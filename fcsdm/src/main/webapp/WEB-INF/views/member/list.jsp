@@ -72,34 +72,7 @@
                         </div>
                         <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">회비 완납자</div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <table class="table">
-	                                <thead>
-	                                	<th class="text-center">이름</th>
-	                                	<th class="text-center">직업</th>
-	                                	<th class="text-center">상태</th>
-	                                	<th class="text-center">최근납부월</th>		                            
-	                                </thead>
-	                                <tbody>
-		                                <c:forEach items="${paid}" var="member">
-										    <tr>
-										    	<td class="text-center">${member.name}</td>
-										    	<td class="text-center">${member.occupation}</td>
-										    	<td class="text-center">${member.grade}</td>
-										    	<td class="text-center">${member.occurMonth}</td>
-										    </tr>
-										</c:forEach>
-	                                </tbody>
-	                            </table>
-                            </div>                            
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                    <!-- /.panel -->                    
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
