@@ -45,7 +45,7 @@
     <!-- /.navbar-header -->
 
     <div class="navbar-default sidebar" role="navigation">
-        <div class="sidebar-nav navbar-collapse">
+        <div class="sidebar-nav">
             <ul class="nav" id="side-menu">
             	<li class="sidebar-search">
                     <!-- /input-group -->
