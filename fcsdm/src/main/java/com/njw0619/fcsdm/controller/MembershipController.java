@@ -57,7 +57,7 @@ private static final Logger logger = LoggerFactory.getLogger(MembershipControlle
 			membership.setOccupation("W".equals(membership.getOccupation()) ? "직장인" : "학생");
 			membership.setGrade("1".equals(membership.getGrade()) ? "정규" : "명예");
 			if(!"납부이력 없음".equals(membership.getOccurMonth()) && (Integer.parseInt(membership.getOccurMonth()) >= Integer.parseInt(currentMonth) 
-					|| ("2".equals(membership.getGrade()) && "2018".equals(membership.getOccurMonth())))) {
+					|| ("명예".equals(membership.getGrade()) && "2018".equals(membership.getOccurMonth())))) {
 				paid.add(membership);
 			}
 			else {

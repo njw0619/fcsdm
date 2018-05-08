@@ -69,7 +69,6 @@
 		                                        <th class="text-center">득실차</th>
 		                                        <th class="text-center">득점</th>
 		                                        <th class="text-center">실점</th>
-		                                        <th class="text-center">최근 5경기</th>
 		                                    </tr>
 		                                </thead>
 		                                <tbody>
@@ -84,7 +83,6 @@
 		                                    	<td class="text-center">${first.diff}</td>
 		                                    	<td class="text-center">${first.goal}</td>
 		                                    	<td class="text-center">${first.losePoint}</td>
-		                                    	<td class="text-center">${first.lastWin}승 ${first.lastDraw}무 ${first.lastLose}패</td>
 		                                    </tr>
 		                                    <tr>
 		                                    	<td class="text-center">2</td>
@@ -97,7 +95,6 @@
 		                                    	<td class="text-center">${second.diff}</td>
 		                                    	<td class="text-center">${second.goal}</td>
 		                                    	<td class="text-center">${second.losePoint}</td>
-		                                    	<td class="text-center">${second.lastWin}승 ${second.lastDraw}무 ${second.lastLose}패</td>
 		                                    </tr>
 		                                </tbody>
 		                            </table>
