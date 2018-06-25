@@ -64,6 +64,13 @@ private static final Logger logger = LoggerFactory.getLogger(MembershipControlle
 				unpaid.add(membership);
 			}
 		}
+		StringBuilder memo = new StringBuilder();
+		memo.append("회비 미납자 명단\n");
+		for(Membership membership : unpaid) {
+			memo.append(membership.getName() + "(" + membership.getOccupation() + ") " + membership.getOccurMonth() + "\n");
+		}
+		
+		model.addAttribute("memo", memo.toString());
 		model.addAttribute("paid", paid);
 		model.addAttribute("unpaid", unpaid);
 		return "membership/list";

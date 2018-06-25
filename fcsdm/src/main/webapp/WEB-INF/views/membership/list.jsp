@@ -26,7 +26,17 @@
 	    <script src="/fcsdm/resources/vendor/metisMenu/metisMenu.min.js"></script>
 	    <!-- Custom Theme JavaScript -->
 	    <script src="/fcsdm/resources/dist/js/sb-admin-2.js"></script>
-    
+    	
+    	<script>
+    	$(function(){		
+    		$("button[name='copyUnpaid']").click(function(){
+    			$("textarea[name='memo']").select();
+    			document.execCommand("copy");
+    			//window.clipboardData.setData("text", $("input[name='memo']").val());
+    			//document.execCommand($("input[name='memo']").val());   			
+    		});
+    	});
+    	</script>
 	</head>
 <body>
 	<div id="wrapper">
@@ -44,7 +54,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
-                        <div class="panel-heading">회비 미납자</div>
+                        <div class="panel-heading">
+                        <div class="row">
+                        	<div class="col-lg-10">회비 미납자</div>
+                        	<div class="col-lg-2 text-right"><button type="button" class="btn btn-danger" name="copyUnpaid">미납자 복사하기</button></div></div>
+                        </div>
                         <div class="panel-body">
                             <div class="row">
                                 <table class="table">
@@ -54,7 +68,7 @@
 	                                	<th class="text-center">상태</th>
 	                                	<th class="text-center">최근납부월</th>		                            
 	                                </thead>
-	                                <tbody>
+	                                <tbody id="unpaidTable">
 		                                <c:forEach items="${unpaid}" var="member">
 										    <tr>
 										    	<td class="text-center">${member.name}</td>
@@ -106,5 +120,6 @@
 
     </div>
     <!-- /#wrapper -->
+    <textarea name="memo" style="height:0px">${memo}</textarea>
 </body>
 </html>
